@@ -26,14 +26,14 @@
     <platform name="ios">
         <preference name="iosPersistentFileLocation" default="Library" />
         <preference name="iosPersistentFileLocation" default="Compatibility" />
-        <edit-config file="*-Info.plist" mode="merge" target="UIFileSharingEnabled">
-            <true />
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="LSSupportsOpeningDocumentsInPlace">
-            <true />
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="UISupportsDocumentBrowser">
-            <true />
-        </edit-config>
+        <config-file target="*-Info.plist" parent="UIFileSharingEnabled">
+            <true/>
+        </config-file>
+        <config-file target="*-Info.plist" parent="LSSupportsOpeningDocumentsInPlace">
+            <true/>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UISupportsDocumentBrowser">
+            <true/>
+        </config-file>
     </platform>
 </plugin>
