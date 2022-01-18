@@ -16,16 +16,16 @@
     </engines>
 
     <platform name="android">
-        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-        <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,root" />
+        <preference name="AndroidPersistentFileLocation" default="Compatibility" />
+        <preference name="AndroidExtraFilesystems" default="files,files-external,documents,sdcard,root" />
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         </config-file>
     </platform>
 
     <platform name="ios">
-        <preference name="iosPersistentFileLocation" value="Library" />
-        <preference name="iosPersistentFileLocation" value="Compatibility" />
+        <preference name="iosPersistentFileLocation" default="Library" />
+        <preference name="iosPersistentFileLocation" default="Compatibility" />
         <edit-config file="*-Info.plist" mode="merge" target="UIFileSharingEnabled">
             <true />
         </edit-config>
