@@ -1,0 +1,29 @@
+{
+  "name": "cordova-external-file-access",
+  "version": "1.0.0",
+  "description": "Cordova plugin to enable file access to system applications",
+  "cordova": {
+    "id": "cordova-external-file-access",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaobarata/cordova-external-file-access.git"
+  },
+  "author": "João Barata (https://github.com/joaobarata)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joaobarata/cordova-external-file-access/issues"
+  },
+  "homepage": "https://github.com/joaobarata/cordova-external-file-access",
+  "keywords": [
+    "cordova",
+    "file",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ]
+}

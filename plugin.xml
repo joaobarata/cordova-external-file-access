@@ -1,0 +1,39 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+        xmlns:android="http://schemas.android.com/apk/res/android" 
+        id="cordova-external-file-access" version="1.0.0">
+
+    <name>cordova-external-file-access</name>
+    <description>Cordova plugin to enable file access to system applications</description>
+    <license>MIT</license>
+    <keywords>cordova</keywords>
+    <repo>https://github.com/joaobarata/cordova-external-file-access</repo>
+    <issue>https://github.com/joaobarata/cordova-external-file-access/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=7.1.0" />
+        <engine name="cordova-android" version=">=8.1.0" />
+        <engine name="cordova-ios" version=">=5.1.1" />
+    </engines>
+
+    <platform name="android">
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+        <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,root" />
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+    </platform>
+
+    <platform name="ios">
+        <preference name="iosPersistentFileLocation" value="Library" />
+        <preference name="iosPersistentFileLocation" value="Compatibility" />
+        <edit-config file="*-Info.plist" mode="merge" target="UIFileSharingEnabled">
+            <true />
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="LSSupportsOpeningDocumentsInPlace">
+            <true />
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="UISupportsDocumentBrowser">
+            <true />
+        </edit-config>
+    </platform>
+</plugin>
